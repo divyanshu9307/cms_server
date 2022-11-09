@@ -4,13 +4,29 @@ const couponSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-
-  typeOfCoupon: String,
-  startDate: Date,
-  endDate: Date,
-  discountAmount: Number,
-  minimumAmountForDiscount: Number,
+  couponRedeemNo: {
+     type: Number,
+      required: true
+     },
+     typeOfCoupon: { 
+    type: String,
+     required: true 
+    },
+  startDate: {
+     type: Date,
+      
+    },
+  endDate: {
+     type: Date,
+      
+     },
+  discountAmount: {
+     type: Number, 
+     required: true
+     },
 });
+// console.log(couponSchema);
+
 const  CouponSystem= mongoose.model("CouponSystem",couponSchema);
 
 
